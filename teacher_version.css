@@ -1,0 +1,141 @@
+#cards {
+  /* position: relative; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card {
+  box-sizing: border-box;
+  /* 卡片在cards容器的排版 */
+  flex: 7% 1 1;
+  height: 8vw;
+  border: 2px solid #e0e0e0;
+  margin: 2px;
+
+  /* 卡片內部元素的排版 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back {
+  background-image: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: #dae0e3;
+}
+
+#header {
+  /* outline: 2px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+  margin: 0 auto;
+}
+
+#header .title {
+  /* outline: 2px solid green; */
+
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+#header .title img {
+  max-width: 3em;
+  align-self: center;
+}
+
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+#header .tried {
+  margin-top: 0;
+}
+
+.wrong {
+  animation: wrongAnimation 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  100% {
+    border: 2px solid #f1c232;
+  }
+}
+
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: rgba(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+
+.completed > p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.completed > p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+}
+
+/* #win-display {
+  position: absolute;
+  top: 9vw;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 16vw;
+  background-color: rgba(239, 248, 254, 0.9);
+
+}
+
+#win-display>h1,
+p {
+  margin: 0;
+}
+
+#win-display h1 {
+  color: #7a8d99;
+  font-size: 3vw;
+}
+
+#win-display p {
+  font-size: 1.5vw;
+} */
